@@ -1,0 +1,132 @@
+.game-over-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.game-over {
+  background: linear-gradient(145deg, #1e1e2e, #16161f);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.game-over__header {
+  margin-bottom: 28px;
+}
+
+.game-over__title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #d4af37;
+  margin: 0 0 8px;
+}
+
+.game-over__reason {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.game-over__stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 28px;
+}
+
+.game-over__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-over__stat-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.game-over__stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+.game-over__form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.game-over__input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.game-over__input:focus {
+  border-color: #d4af37;
+}
+
+.game-over__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.game-over__submit-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #d4af37;
+  color: #1a1a2e;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.game-over__submit-btn:hover:not(:disabled) {
+  background: #e6c44d;
+  transform: translateY(-1px);
+}
+
+.game-over__submit-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.game-over__submitted {
+  margin-bottom: 24px;
+}
+
+.game-over__rank {
+  color: #4ade80;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.game-over__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}

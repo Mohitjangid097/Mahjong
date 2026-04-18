@@ -1,0 +1,145 @@
+.how-to-play__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.how-to-play__modal {
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.how-to-play__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  background: #1a1a2e;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+}
+
+.how-to-play__header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #d4af37;
+}
+
+.how-to-play__close {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.how-to-play__close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.how-to-play__content {
+  padding: 20px 24px;
+}
+
+.how-to-play__section {
+  margin-bottom: 22px;
+}
+
+.how-to-play__section:last-child {
+  margin-bottom: 0;
+}
+
+.how-to-play__section h3 {
+  font-size: 0.95rem;
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.how-to-play__section > p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0 0 6px;
+}
+
+.how-to-play__section ol,
+.how-to-play__section ul {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.how-to-play__section strong {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.how-to-play__higher {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.how-to-play__lower {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.how-to-play__tiles-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.how-to-play__tile-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.how-to-play__tile-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.how-to-play__tile-type strong {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+}
+
+.how-to-play__tile-type p {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+  line-height: 1.3;
+}
