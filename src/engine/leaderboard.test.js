@@ -1,13 +1,20 @@
-/**
- * @vitest-environment jsdom
- */
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { getLeaderboard, submitScore } from './leaderboard';
 
 const STORAGE_KEY = 'mahjong_leaderboard';
 
+const store = {};
+const localStorageMock = {
+  getItem: vi.fn((key) => store[key] ?? null),
+  setItem: vi.fn((key, value) => { store[key] = value; }),
+  clear: vi.fn(() => { for (const k in store) delete store[k]; }),
+  removeItem: vi.fn((key) => { delete store[key]; }),
+};
+Object.defineProperty(globalThis, 'localStorage', { value: localStorageMock });
+
 beforeEach(() => {
   localStorage.clear();
+  vi.clearAllMocks();
 });
 
 describe('getLeaderboard', () => {
